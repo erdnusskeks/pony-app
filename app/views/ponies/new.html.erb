@@ -1,0 +1,11 @@
+<h1>New Pony</h1>
+ <%= form_for @pony, :url => { :action => "create" } do |f| %>
+   <%= f.text_field :name %>
+   <%= f.text_field :color %>
+   <%= f.select :kind_of, ["earth", "pegasus", "unicorn"], :prompt => "-" %>
+   <%= f.submit %>
+   <%= @pony.errors.full_messages.each do |msg| %>
+   	<div class ="alert alert-error"><%= msg %></div>
+  <% end %> 	
+ <% end -%>
+

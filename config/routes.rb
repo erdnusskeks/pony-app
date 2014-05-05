@@ -1,4 +1,6 @@
 PonyApp::Application.routes.draw do
+  root :to => 'pages#index', as: :home_page
+  resources :ponies
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
